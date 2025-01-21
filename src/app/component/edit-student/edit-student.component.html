@@ -1,0 +1,65 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h2>Editar perfil </h2>
+    <!-- Fila: Nombre -->
+    <div class="form-row single">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" formControlName="nombre"/>
+      </div>
+    </div>
+  
+    <!-- Fila: Edad, Sexo y Fecha de Nacimiento -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input type="number" name="edad" id="edad" formControlName="edad" />
+      </div>
+      <div class="form-group">
+        <label for="sexo">Sexo</label>
+        <select name="sexo" id="sexo" formControlName="sexo">
+          <option value="M">Masculino</option>
+          <option value="F">Femenino</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fecha">F. Nacimiento</label>
+        <input type="date" name="fecha" id="fecha" formControlName="fechaNacimiento" />
+      </div>
+    </div>
+  
+    <!-- Fila: Teléfono y Correo -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="text" name="telefono" id="telefono" formControlName="telefono"/>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo</label>
+        <input type="email" name="email" id="email" formControlName="correo" />
+      </div>
+    </div>
+  
+    <!-- Fila: Dirección y Carrera -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input type="text" name="direccion" id="direccion" formControlName="direccion" />
+      </div>
+      <div class="form-group">
+        <label for="carrera">Carrera</label>
+        <input type="text" name="carrera" id="carrera" formControlName="carrera" />
+      </div>
+    </div>
+    @if (errorDatosFaltantes()) {
+      <div class="error">
+        <p>Por favor complete todos los campos</p>
+      </div>
+    }
+  
+    <!-- Botones de Acción -->
+    <div class="actions">
+      <a [routerLink]="['../../',]">Cancelar</a>
+      <button type="submit">Actualizar</button>
+    </div>
+  </form>
+    

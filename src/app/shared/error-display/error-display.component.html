@@ -1,0 +1,12 @@
+@if (errorMessage()) {    
+    <div class="backdrop" >
+        <div class="modal">
+          <h3>Error</h3>
+          <p>{{ errorMessage() }}</p>
+          <div class="actions">
+            <button (click)="clearError()">Cerrar</button>
+          </div>
+        </div>
+      </div>
+      
+}

@@ -1,0 +1,34 @@
+
+<div>
+    <a [routerLink]="['addStudent']" routerLinkActive="selected">
+        <strong class="">Agregar estudiante</strong> <strong>+</strong>
+    </a>
+</div>
+<div class="search-bar">
+    <a>
+        <input type="text"
+        placeholder="Buscar Estudiante ..."
+        (input)="onSearchStudent($event)">
+    </a>
+</div>
+@for (student of paginatedStudents(); track student.id) {
+    <div id="{{student.id}}" >
+        <a [routerLink]="['/profile',student.id]" routerLinkActive="selected">
+            @if (student.sexo === 'F') {
+                <img src="female.png" alt="user">
+            }@else {
+                <img src="male.png" alt="user">
+            }
+                <section>
+                    <span>{{ student.nombre }}</span>
+                    <p>Edad: {{student.edad}}</p>
+                    <p>Carrera: {{ student.carrera }}</p>
+                </section>
+        </a>
+    </div>
+}
+<div class="pagination-controls">
+    <button (click)="previousPage()" [disabled]="currentPage()===1">Anterior</button>
+    <button (click)="nextPage()" [disabled]="currentPage()=== totalPages()">Siguiente</button>
+</div>
+

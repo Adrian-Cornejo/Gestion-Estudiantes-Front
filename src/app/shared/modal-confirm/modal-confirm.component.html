@@ -1,0 +1,11 @@
+@if (isVisible()) {}
+<div class="backdrop">
+    <div class="modal">
+        <h3>{{title()}}</h3>
+        <p>{{message()}}</p>
+        <div class="actions">
+            <button (click)="onConfirm()">Confirmar</button>
+            <button (click)="onCancel()">Cancelar</button>
+        </div>
+    </div>
+</div>

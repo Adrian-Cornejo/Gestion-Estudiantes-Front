@@ -1,0 +1,76 @@
+/* Card para el perfil del estudiante */
+.student-card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(194, 124, 124, 0.1);
+    background-color: #433352;
+    font-family: Arial, sans-serif;
+  }
+  
+img {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  .student-card h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+  
+  .student-card .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .student-card p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .student-card p strong {
+    color: #cccaca;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+
+  .btn-modify:hover {
+    background-color: #808180;
+  }
+  
+  .btn-delete {
+    background-color: #9c3e48;
+
+  }
+  
+  .btn-delete:hover {
+    background-color: rgb(190, 56, 54);
+  }
+  
+  /* Estilo para cuando no hay estudiante seleccionado */
+  .no-student {
+    text-align: center;
+    color: #999;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
